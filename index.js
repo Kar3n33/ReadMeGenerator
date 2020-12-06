@@ -31,7 +31,8 @@ const questions = () =>
           type: 'input',
           name: 'license',
           message: 'What kind of license should your project have?',
-          choices: ["MIT", 
+          choices: 
+          ["MIT", 
           "APACHE 2.0", 
           "GPL 3.0", 
           "BSD 3", 
@@ -69,18 +70,19 @@ const questions = () =>
 // function to write README file
 // function writeToFile(fileName, data) {
     function generateMarkdown(data) {
-        return `# ${data.title}
-        ![Github License]${data.license}
+      return `# My Project Name: ${data.title}
+      [Github License]
+      ${data.license}
       ## Description 
       ${data.description}
 
-      ## Table of Contents
+      ## Table of Contents:
       
-      * [Installation](#Installation)
-      * [Usage](#Usage)
-      * [License](#License)
-      * [Contributing](#Contributing)
-      * [Test](#Test)
+      * [Installation](#installation)
+      * [Usage](#usage)
+      * [License](#license)
+      * [Contributing](#contributing)
+      * [Test](#test)
     
       ## Installation
        ${data.installation}
@@ -108,6 +110,6 @@ const questions = () =>
 
 questions()
 .then((data) => writeFileAsync("ReadMe.md", generateMarkdown(data)))
-.then(() => console.log('successfully wrote to ReadMe'))
+.then(() => console.log('Successfully generated ReadMe file'))
 .catch((err) => console.error(err));
 
