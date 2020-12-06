@@ -1,8 +1,10 @@
 # My Project Name: ReadMe File Generator
-      [Github License]
+      
+      ##License
       MIT
+
       ## Description 
-      This application will create a ReadMe file based on questions answered from the user.
+      Answer a series of questions to generate a ReadMe File
 
       ## Table of Contents:
       
@@ -13,16 +15,16 @@
       * [Test](#test)
     
       ## Installation
-       undefined
+       npm i
 
       ## Usage 
-      npm i
+      undefined
 
       ## License 
       MIT
 
       ## Contributing 
-      Any suggestions or questions just email me.
+      feel free to reach out via email with any tips/suggestions.
 
       ## Test 
       The application will be evoked using the following command:
@@ -31,5 +33,5 @@
     '''
     
       ## Questions
-      If you have any additional questions you can reach me on my Github:kar3n33 or Email:kar3n.acosta@gmail.com
+      If you have any additional questions you can reach me on my Github:Kar3n33 or Email:kar3n.acosta@gmail.com
       

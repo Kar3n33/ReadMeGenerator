@@ -31,8 +31,7 @@ const questions = () =>
           type: 'input',
           name: 'license',
           message: 'What kind of license should your project have?',
-          choices: 
-          ["MIT", 
+          choices: ["MIT", 
           "APACHE 2.0", 
           "GPL 3.0", 
           "BSD 3", 
@@ -41,9 +40,9 @@ const questions = () =>
 
         {
           type: 'input',
-          name: 'usage',
+          name: 'installation',
           message: 'What command should be run to install depencies?',
-          choice: ["npm i"]
+          choice: "npm i"
         },
 
         {
@@ -68,11 +67,13 @@ const questions = () =>
 
 
 // function to write README file
-// function writeToFile(fileName, data) {
+
     function generateMarkdown(data) {
       return `# My Project Name: ${data.title}
-      [Github License]
+      
+      ##License
       ${data.license}
+
       ## Description 
       ${data.description}
 
