@@ -28,28 +28,28 @@ const questions = () =>
           message: 'Please write a short description of your project',
         },
         {
-          type: 'input',
+          type: 'list',
           name: 'license',
           message: 'What kind of license should your project have?',
-          choices: ["MIT", 
-          "APACHE 2.0", 
-          "GPL 3.0", 
-          "BSD 3", 
-          "NONE"]
+          choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "NONE"],
+          pointer: "-",
+          color: "red"
         },
 
         {
-          type: 'input',
+          type: 'list',
           name: 'installation',
           message: 'What command should be run to install depencies?',
-          choice: "npm i"
+          choices: ["npm i"],
+          pointer: "-"
         },
 
         {
-          type: 'input',
+          type: 'list',
           name: 'test',
           message: 'What command should be run to run tests?',
-          choice: ["npm test"]
+          choices: ["npm test"],
+          pointer: "-"
         },
         {
           type: 'input',
@@ -69,45 +69,45 @@ const questions = () =>
 // function to write README file
 
     function generateMarkdown(data) {
-      return `# My Project Name: ${data.title}
+return `# My Project Name: ${data.title}
+## License
+  ${data.license}
+
+## Description 
+  ${data.description}
+
+## Table of Contents:
       
-      ##License
-      ${data.license}
-
-      ## Description 
-      ${data.description}
-
-      ## Table of Contents:
-      
-      * [Installation](#installation)
-      * [Usage](#usage)
-      * [License](#license)
-      * [Contributing](#contributing)
-      * [Test](#test)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Test](#test)
     
-      ## Installation
-       ${data.installation}
+## Installation
+  ${data.installation}
 
-      ## Usage 
-      ${data.usage}
+## Usage 
+  ${data.usage}
 
-      ## License 
-      ${data.license}
+## License 
+  ${data.license}
 
-      ## Contributing 
-      ${data.contributing}
+## Contributing 
+  ${data.contributing}
 
-      ## Test 
-      The application will be evoked using the following command:
-    '''bash
-    ${data.test}
-    '''
+## Test 
+The application will be evoked using the following command:
+  '''bash
+  npm test
+  '''
     
-      ## Questions
-      If you have any additional questions you can reach me on my Github:${data.Github} or Email:${data.Email}
+## Questions
+If you have any additional questions you can reach me on my Github:${data.Github} or Email:${data.Email}
       `;
       }
-
+ module.exports = generateMarkdown;
+  
 
 questions()
 .then((data) => writeFileAsync("ReadMe.md", generateMarkdown(data)))
