@@ -17,20 +17,17 @@
   npm i
 
 ## Usage 
-  undefined
-
-## License 
-  MIT
+  Will be adding more content to ReadMe.
 
 ## Contributing 
-  If you have any suggestions feel free to email me.
+  If you have any tips or suggestions feel freeto email me.
 
-# Test 
+## Test 
 The application will be evoked using the following command:
 
   npm test
 
     
-# Questions
+## Questions
 If you have any additional questions you can reach me on my Github:Kar3n33 or Email:kar3n.acosta@gmail.com
       

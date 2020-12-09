@@ -53,7 +53,7 @@ const questions = () =>
         },
         {
           type: 'input',
-          name: 'usingrepo',
+          name: 'usage',
           message: 'What does the user need to know about using the repo?',
         },
         {
@@ -90,19 +90,16 @@ return `# My Project Name: ${data.title}
 ## Usage 
   ${data.usage}
 
-## License 
-  ${data.license}
-
 ## Contributing 
   ${data.contributing}
 
-# Test 
+## Test 
 The application will be evoked using the following command:
 
   npm test
 
     
-# Questions
+## Questions
 If you have any additional questions you can reach me on my Github:${data.Github} or Email:${data.Email}
       `;
       }
