@@ -33,4 +33,4 @@ If you have any additional questions you can reach me on my Github:Kar3n33 or Em
 
 ## Animated Application Walkthrough
       
- ![](readme.gif)     
+ ![](readme2.gif)     
