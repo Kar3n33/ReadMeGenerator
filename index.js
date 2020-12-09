@@ -96,13 +96,13 @@ return `# My Project Name: ${data.title}
 ## Contributing 
   ${data.contributing}
 
-## Test 
+# Test 
 The application will be evoked using the following command:
-  '''bash
+
   npm test
-  '''
+
     
-## Questions
+# Questions
 If you have any additional questions you can reach me on my Github:${data.Github} or Email:${data.Email}
       `;
       }
